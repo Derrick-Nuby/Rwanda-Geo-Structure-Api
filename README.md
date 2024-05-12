@@ -15,7 +15,7 @@ To integrate Rwanda Geo Structure into your web application, follow these simple
 1. Include the provided JavaScript file in your project:
 
     ```html
-    <script type="text/javascript" src="https://derrick-nuby.github.io/Rwanda-Geo-Structure/rwandageostructure.js"></script>
+    <script type="text/javascript" src="https://derrick-nuby.github.io/Rwanda-Geo-Structure-Api/rwandageostructure.js"></script>
     ```
 
 2. Create a form in your HTML with the following structure:
