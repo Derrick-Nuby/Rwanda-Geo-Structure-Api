@@ -1,60 +1,67 @@
-# Rwanda Geographic Hierarchy Selector
+# Rwanda Geo Structure
 
-This project provides a hierarchical form for selecting geographic locations within Rwanda. Users can select a country, province, district, sector, cell, and village using dropdown menus.
+## Overview
 
-## Features
+Rwanda Geo Structure is a JavaScript app designed to simplify the process of obtaining local Rwandan administrative divisions. This app allows developers to easily integrate a form into their web applications, enabling users to select various administrative divisions such as country, province, district, sector, cell, and village. By utilizing this library, developers can streamline the process of collecting location-based data from users in Rwanda.
 
-- **Hierarchical Dropdowns**: Users can navigate through the geographic hierarchy by selecting options from dependent dropdown menus.
-- **Dynamic Population**: Dropdown options are dynamically populated based on the user's selection in the preceding dropdown.
-- **Data Structure**: The geographic hierarchy is structured within a JavaScript object (`data`) to facilitate dynamic population of dropdowns.
-- **Validation**: Dropdowns are disabled if there are no options available for the selected parent, ensuring a valid selection at each level.
-- **Reset Functionality**: Users can reset the form to its initial state, clearing all selections made so far.
+## Purpose
+
+The primary purpose of this project is to provide developers with a convenient tool for gathering location information within Rwanda. By embedding the provided form into their applications, developers can ensure consistent data collection and simplify user interaction when selecting local administrative divisions. This project aims to enhance the user experience and improve the efficiency of location-based data collection processes in Rwandan applications.
 
 ## Usage
 
-1. **Select Country**: Begin by selecting "Rwanda" from the country dropdown.
-2. **Navigate Hierarchically**: Proceed to select a province, district, sector, cell, and village sequentially using the dropdown menus.
-3. **Reset Form**: To start over, use the reset button to clear all selections and return to the initial state.
+To integrate Rwanda Geo Structure into your web application, follow these simple steps:
 
-## Installation
+1. Include the provided JavaScript file in your project:
 
-To use this project locally:
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/Derrick-Nuby/Rwanda-Geo-Structure.git
+    ```html
+    <script type="text/javascript" src="https://derrick-nuby.github.io/Rwanda-Geo-Structure/rwandageostructure.js"></script>
     ```
 
-2. Open `index.html` in your web browser.
+2. Create a form in your HTML with the following structure:
 
-## Data Structure
+    ```html
+    <form >            
+            <label for="country">Enter the country</label>
+            <select name="country" id="country">
+                <option value="select">Select Your Country</option>
+            </select>
 
-The geographic hierarchy is represented within the `data` object in `script.js`. Ensure that the structure of this object matches the hierarchical structure of the dropdowns.
+            <label for="province">Enter the province</label>
+            <select name="province" id="province">
+                <option value="select">Select Your Province</option>
+            </select>
 
-```javascript
-const data = {
-    "Rwanda": {
-        "Province 1": {
-            "District 1": {
-                "Sector 1": {
-                    "Cell 1": ["Village 1", "Village 2"],
-                    "Cell 2": ["Village 3", "Village 4"]
-                },
-                // Add more sectors and cells as needed
-            },
-            // Add more districts, sectors, cells, and villages as needed
-        },
-        // Add more provinces, districts, sectors, cells, and villages as needed
-    },
-    // Add data for other countries if applicable
-};
+            <label for="district">Enter the district</label>
+            <select name="district" id="district">
+                <option value="select">Select Your District</option>
+            </select>
 
-## Contributing
-Contributions are welcome! If you have any suggestions, enhancements, or bug fixes, feel free to open an issue or create a pull request.
+            <label for="sector">Enter the sector</label>
+            <select name="sector" id="sector">
+                <option value="select">Select Your Sector</option>
+            </select>
 
-## License
-This project is licensed under the MIT License.
+            <label for="cell">Enter the cell</label>
+            <select name="cell" id="cell">
+                <option value="select">Select Your Cell</option>
+            </select>
 
-## Also
-Feel free to use this updated version in your repository's README.md file. Let me know if you need further assistance!
+            <label for="village">Enter the village</label>
+            <select name="village" id="village">
+                <option value="select">Select Your Village</option>
+            </select>
+    </form>
+    ```
+
+3. Ensure that each form field has the corresponding ID specified in the HTML (e.g., `country`, `province`, `district`, `sector`, `cell`, `village`).
+
+4. Users can now interact with the form to select the desired administrative divisions within Rwanda.
+
+## Contributors
+Derrick Nuby
+## Initial development License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+Special thanks to all contributors who helped make this project possible.
