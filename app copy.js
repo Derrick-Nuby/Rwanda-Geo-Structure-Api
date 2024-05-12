@@ -20043,48 +20043,43 @@ const data =
    }
 }
 
-const countryDropdown = document.getElementById('country');
-Object.keys(data).forEach(country => {
-   const option = document.createElement('option');
-   option.text = country;
-   option.value = country;
-   countryDropdown.add(option);
-});
+// Function to populate dropdown
+function populateDropdown(parentDropdownId, childDropdownId, data) {
+   var parentDropdown = document.getElementById(parentDropdownId);
+   var childDropdown = document.getElementById(childDropdownId);
+   var selectedOption = parentDropdown.value;
 
-// Function to populate dropdown based on parent selection
-// Function to populate dropdown based on parent selection
-function populateDropdown(parentDropdown, childDropdown, childData) {
-   const selectedOption = parentDropdown.options[parentDropdown.selectedIndex].value;
-   childDropdown.innerHTML = '<option value="select">Select Your ' + childDropdown.name + '</option>';
+   // Clear existing options
+   childDropdown.innerHTML = '<option value="select">Select Your ' + childDropdownId.charAt(0).toUpperCase() + childDropdownId.slice(1) + '</option>';
+
+   // Populate child dropdown with options
    if (selectedOption !== 'select') {
-       const childOptions = Array.isArray(childData[selectedOption]) ? childData[selectedOption] : Object.keys(childData[selectedOption]);
-       childOptions.forEach(option => {
-           const optionElement = document.createElement('option');
-           optionElement.text = option;
-           optionElement.value = option;
-           childDropdown.add(optionElement);
-       });
+       var childOptions = data[selectedOption];
+       console.log(childOptions);
+       for (var key in childOptions) {
+           var option = document.createElement("option");
+           option.value = key;
+           option.text = key;
+           childDropdown.appendChild(option);
+       }
    }
 }
 
+// Function to handle dropdown change event
+function dropdownChange(parentDropdownId, childDropdownId, data) {
+   var parentDropdown = document.getElementById(parentDropdownId);
+   parentDropdown.addEventListener('change', function () {
+       console.log("Dropdown changed: " + parentDropdownId);
+       populateDropdown(parentDropdownId, childDropdownId, data);
+   });
+}
 
-// Event listeners for dropdowns
-countryDropdown.addEventListener('change', () => {
-   populateDropdown(countryDropdown, document.getElementById('province'), data);
-});
+// Populate country dropdown
+populateDropdown('country', 'province', data);
 
-document.getElementById('province').addEventListener('change', () => {
-   populateDropdown(document.getElementById('province'), document.getElementById('district'), data[countryDropdown.value]);
-});
-
-document.getElementById('district').addEventListener('change', () => {
-   populateDropdown(document.getElementById('district'), document.getElementById('sector'), data[countryDropdown.value][document.getElementById('province').value]);
-});
-
-document.getElementById('sector').addEventListener('change', () => {
-   populateDropdown(document.getElementById('sector'), document.getElementById('cell'), data[countryDropdown.value][document.getElementById('province').value][document.getElementById('district').value]);
-});
-
-document.getElementById('cell').addEventListener('change', () => {
-   populateDropdown(document.getElementById('cell'), document.getElementById('village'), data[countryDropdown.value][document.getElementById('province').value][document.getElementById('district').value][document.getElementById('sector').value]);
-});
+// Handle dropdown change events
+dropdownChange('country', 'province', data);
+dropdownChange('province', 'district', data);
+dropdownChange('district', 'sector', data);
+dropdownChange('sector', 'cell', data);
+dropdownChange('cell', 'village', data);
