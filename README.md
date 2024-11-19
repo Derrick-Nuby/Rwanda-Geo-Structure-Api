@@ -11,6 +11,9 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://derrick.rw/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/derrick-nuby/)
+
 Rwanda Geo Structure is a comprehensive JavaScript package that provides easy access to Rwanda's administrative divisions. It allows developers to retrieve and work with data about provinces, districts, sectors, cells, and villages in Rwanda, streamlining the process of collecting and managing location-based data for applications focused on Rwanda.
 
 ## Table of Contents
