@@ -1,3 +1,5 @@
+// file location: src/getCells.ts
+
 import rwandaData from './Rwanda.json';
 import { RwandaData } from './types';
 

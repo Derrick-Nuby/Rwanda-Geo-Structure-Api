@@ -6,4 +6,5 @@ export * from './getProvinces';
 export * from './getRandomLocation';
 export * from './getSectors';
 export * from './getVillages';
+export * from './countLocations';
 export * from './types';

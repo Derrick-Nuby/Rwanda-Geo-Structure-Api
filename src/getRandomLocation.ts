@@ -1,3 +1,5 @@
+// file location src/getRandomLocation.ts
+
 import rwandaData from './Rwanda.json';
 import { RwandaData } from './types';
 

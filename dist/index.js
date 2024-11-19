@@ -1,4 +1,5 @@
 "use strict";
+// file location: src/index.ts
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -22,4 +23,5 @@ __exportStar(require("./getProvinces"), exports);
 __exportStar(require("./getRandomLocation"), exports);
 __exportStar(require("./getSectors"), exports);
 __exportStar(require("./getVillages"), exports);
+__exportStar(require("./countLocations"), exports);
 __exportStar(require("./types"), exports);

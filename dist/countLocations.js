@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.countLocations = void 0;
+// file location: src/countLocation.ts
 var Rwanda_json_1 = __importDefault(require("./Rwanda.json"));
 var data = Rwanda_json_1.default;
 var countLocations = function () {

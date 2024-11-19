@@ -1,3 +1,5 @@
+// file location src/getDistricts.ts
+
 import { countLocations } from "../countLocations";
 import { getCells, getCellsBySector } from "../getCells";
 import { getCountry } from "../getCountry";

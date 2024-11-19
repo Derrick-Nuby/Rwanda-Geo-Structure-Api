@@ -1,4 +1,5 @@
 "use strict";
+// file location src/getDistricts.ts
 Object.defineProperty(exports, "__esModule", { value: true });
 var countLocations_1 = require("../countLocations");
 var getCells_1 = require("../getCells");

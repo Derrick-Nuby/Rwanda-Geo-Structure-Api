@@ -1,3 +1,4 @@
+// file location src/getDistricts.ts
 export interface RwandaData {
   rwanda: {
     [province: string]: Province;
