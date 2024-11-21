@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.countLocations = exports.getRandomLocation = exports.getVillagesByCell = exports.getVillages = exports.getCellsBySector = exports.getCells = exports.getSectorsByDistrict = exports.getSectors = exports.getDistrictsByProvince = exports.getDistricts = exports.getProvinces = exports.getCountry = void 0;
-var Rwanda_json_1 = __importDefault(require("./Rwanda.json"));
+var Rwanda_json_1 = __importDefault(require("../Rwanda.json"));
 // data import
 var data = Rwanda_json_1.default;
 // functions
