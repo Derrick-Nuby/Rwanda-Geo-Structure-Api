@@ -1,6 +1,6 @@
 {
   "name": "rwanda-geo-structure",
-  "version": "1.3.2",
+  "version": "1.3.9",
   "description": "Rwanda Geo Structure is a JavaScript app that simplifies obtaining local Rwandan administrative divisions. It allows developers to enable users to select divisions like province, district, sector, cell, and village, streamlining the collection of location-based data in Rwanda.",
   "main": "dist/rwanda.js",
   "types": "dist/rwanda.d.ts",
